@@ -18,9 +18,7 @@
 4. Run `npm audit fix` to make sure all packages are up to date
 5. Fulfill the listed requirements.
 
-Starter code is available to you in the main project repo. You are
-required to turn in your submission by making a pull request on the original
-repository.
+Starter code is available to you in the main project repo. 
 
 ## Requirements
 
