@@ -55,4 +55,4 @@ Author.find({}).remove(() => {
       })
     })
   })
-})
+}).then(console.log('seed added'))

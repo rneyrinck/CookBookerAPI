@@ -3,6 +3,18 @@ const app = express()
 
 // Add the middleware code needed to accept incoming data and add it to req.body
 
+// app.use(logger('dev'));
+app.use(express.urlencoded({extended:false}))
+app.use(express.json())
+
+app.get('/', (req, res) => {
+    res.json({
+        status:200,
+        msg: 'you have hit the default route...nothing to see here'
+    })
+})
+
+
 const cookbookRouter = require('./controllers/cookbookRoutes')
 app.use('/api/cookbooks/', cookbookRouter)
 
