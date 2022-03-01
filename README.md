@@ -4,11 +4,11 @@
 
 ## Prerequisites
 
-* Express
-* Mongoose & MongoDB
-* Mongoose Queries
-* Routes & Controllers
-* Postman
+- Express
+- Mongoose & MongoDB
+- Mongoose Queries
+- Routes & Controllers
+- Postman
 
 ## Instructions
 
@@ -18,20 +18,22 @@
 4. Run `npm audit fix` to make sure all packages are up to date
 5. Fulfill the listed requirements.
 
-Starter code is available to you in the main project repo. 
+Starter code is available to you in the main project repo.
 
 ## Requirements
 
 1. Start your server from the terminal by running: `npm run dev`
-2. Your connection and seed files are already set up for you. Start by working through the prompts inside 
-* `Author.js`
-* `Cookbook.js`
+2. Your connection and seed files are already set up for you. Start by working through the prompts inside
+
+- `Author.js`
+- `Cookbook.js`
+
 3. Run `mongod` in your terminal. In a different tab, seed your data from the command line. Use mongo to make sure your data was inserted.
 4. Review the prompts that are provided to you in the following files:
 
-* `server.js`
-* `controllers/cookbookRoutes.js`
-* `controllers/authorRoutes.js`
+- `server.js`
+- `controllers/cookbookRoutes.js`
+- `controllers/authorRoutes.js`
 
 5. In the order the files are listed above, work through the prompts, adding your code block under each prompt. Check each route as you complete them.
 6. Submit with a pull request on this repo.
@@ -40,13 +42,20 @@ Starter code is available to you in the main project repo.
 
 Update the below routing table with the routes
 
-| **URL**     | **HTTP Verb** | **Action** | **Description**             |
-| ----------- | ------------- | -------------- | ---------------------- |
-| /     | GET           |    index            | get all fruits         |
-| /     | POST          |    create            | create a new fruit     |
-| / | GET           |    show            | get a single fruit     |
-| / | PUT           |    update            | update a single fruit  |
-| / | DELETE        |    destroy            | destroy a single fruit |
+| **URL**               | **HTTP Verb** | **Action** | **Description**                |
+| --------------------- | ------------- | ---------- | ------------------------------ |
+| /                     | GET           | index      | default route                  |
+| /authors              | GET           | index      | get all authors                |
+| /authors/:firstName   | GET           | show       | get author by first name       |
+| /authors              | POST          | create     | create new author              |
+| /authors/:authorid    | PUT           | update     | update a single author         |
+| /authors/:firstName   | DELETE        | delete     | delete 1st cookbook            |
+| /cookbooks            | GET           | index      | get all cookbooks              |
+| /cookbooks/:title     | GET           | show       | get book by title              |
+| /cookbooks/year/:year | GET           | show       | get cookbook by published year |
+| /cookbooks            | POST          | create     | create new book                |
+| /cookbooks/:bookid    | PUT           | udpate     | update book by id              |
+| /cookbooks/:title     | DELETE        | delete     | destroy a single book by id    |
 
 ## Plagiarism
 
