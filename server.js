@@ -1,11 +1,15 @@
+require('dotenv').config()
 const express = require('express')
+const logger = require('morgan')
+const cors = require('cors')
+
+const PORT = process.env.PORT
+
 const app = express()
-
-// Add the middleware code needed to accept incoming data and add it to req.body
-
-// app.use(logger('dev'));
-app.use(express.urlencoded({extended:false}))
+app.use(logger('dev'))
+app.use(cors())
 app.use(express.json())
+app.use(express.urlencoded({extended:false}))
 
 app.get('/', (req, res) => {
     res.json({
@@ -21,4 +25,4 @@ app.use('/api/cookbooks/', cookbookRouter)
 const authorRouter = require('./controllers/authorRoutes')
 app.use('/api/authors/', authorRouter)
 
-app.listen(4000, () => console.log('Server running on port 4000!'))
+app.listen(PORT, () => console.log(`Server running on port ${PORT}!`))
