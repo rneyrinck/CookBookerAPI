@@ -58,13 +58,9 @@ router.put("/:authorid", (req, res) => {
 //   });
 // });
 router.delete('/:firstName',(req,res)=>{
-    Author.find({firstName: req.params.firstName}).then(author=>{
+    Author.findOneAndDelete({firstName: req.params.firstName}).then(author=>{
+            res.status(200).json(author)
        
-        console.log(author[0].cookbooks[0])
-        const toDelete = author[0].cookbooks[0]
-        Cookbook.findOneAndDelete({_id: toDelete}).then(book=>{
-            res.status(200).json(book)
-        })
     })
     // Author.findOneAndDelete({firstName: req.params.firstName}, {cookbooks: [0]}).then(author=>{
     //     Cookbook.delete(author[0])

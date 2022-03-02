@@ -19,6 +19,11 @@ router.get("/:title", (req, res) => {
     res.status(200).json(book);
   });
 });
+router.get("/id/:id", (req, res) => {
+  Cookbook.findById(req.params.id).then((book) => {
+    res.status(200).json(book);
+  });
+});
 // Write the route to get cookbook by year published
 router.get("/year/:year", (req, res) => {
   // const year = req.params.year
@@ -44,6 +49,13 @@ router.put("/:bookid", (req, res) => {
 // Write the route to delete the cookbook by title
 router.delete("/:title", async (req, res) => {
   Cookbook.deleteOne({ title: req.params.title }).then((books) => {
+    Cookbook.find({}).then((allTheBooks) => {
+      res.status(200).json(allTheBooks);
+    });
+  });
+});
+router.delete("/id/:id", async (req, res) => {
+  Cookbook.deleteOne({ _id: req.params.id }).then((books) => {
     Cookbook.find({}).then((allTheBooks) => {
       res.status(200).json(allTheBooks);
     });
