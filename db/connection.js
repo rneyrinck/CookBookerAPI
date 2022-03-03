@@ -2,13 +2,13 @@ const mongoose = require('mongoose')
 
 // mongoose.connect('mongodb://localhost/cookbooks_db', { useNewUrlParser: true })
 
-// mongoose.Promise = Promise
+mongoose.Promise = Promise
 let mongoURL = ""
 
 if (process.env.NODE_ENV === "production") {
   mongoURL = process.env.DB_URL;
 } else {
-  mongoURL = "mongodb://localhost/vinyl-api"; // match current mongodb for localhost
+  mongoURL = "mongodb://localhost/cookbooks_db"; // match current mongodb for localhost
 }
 
 mongoose.connect(mongoURL)

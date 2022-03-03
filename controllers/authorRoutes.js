@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
-const Author = require("../models/Author.js");
-const Cookbook = require("../models/Cookbook");
+const Author = require("./../models/Author.js");
+const Cookbook = require("./../models/Cookbook");
 
 // Write the route to list all authors
 router.get("/", (req, res) => {

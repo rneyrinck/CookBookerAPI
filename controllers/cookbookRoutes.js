@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 // Require the Cookbook controller.
-const Cookbook = require("../models/Cookbook.js");
+const Cookbook = require("./../models/Cookbook.js");
 // Write the route to list all cookbooks
 router.get("/", (req, res) => {
   Cookbook.find({})

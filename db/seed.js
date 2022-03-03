@@ -1,5 +1,5 @@
-const Author = require('../models/Author')
-const Cookbook = require('../models/Cookbook')
+const Author = require('./../models/Author')
+const Cookbook = require('./../models/Cookbook')
 
 Author.find({}).remove(() => {
   Cookbook.find({}).remove(() => {
