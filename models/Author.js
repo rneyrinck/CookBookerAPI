@@ -14,7 +14,7 @@ const Author = new Schema({
     lastName: String,
     cookbooks: [ {
         ref: 'Cookbook',
-        type: mongoose.Schema.Types.ObjectId
+        type: mongoose.Schema.Types.Object
     } ]
 })
 
