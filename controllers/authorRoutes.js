@@ -30,7 +30,7 @@ router.post("/", (req, res) => {
 router.put("/:authorid", (req, res) => {
   Author.findByIdAndUpdate(req.params.authorid, req.body, { new: true }).then(
     (author) => {
-      res.status(200).json(author);
+      res.status(200).json(author)
     }
   );
 });
@@ -66,5 +66,16 @@ router.delete('/:firstName',(req,res)=>{
     //     Cookbook.delete(author[0])
     // })
 })
+router.put('/authorId/:authorId/bookId/:bookId', async (req, res) => {
+  const cookbook = await Cookbook.findById(req.params.bookId)
+  const author = await Author.findById(req.params.authorId).populate('cookbooks')
 
+  author.cookbooks.push(cookbook)
+  author.save()
+
+  res.json({
+      status: 200,
+      author: author
+  })
+})
 module.exports = router;
