@@ -72,7 +72,20 @@ router.put('/authorId/:authorId/bookId/:bookId', async (req, res) => {
 
   author.cookbooks.push(cookbook)
   author.save()
+  
+  res.json({
+      status: 200,
+      author: author
+  })
+})
+// add new book to author
+router.patch('/authorId/:authorId', async (req, res) => {
+  const cookbook = await req.body
+  const author = await Author.findById(req.params.authorId).populate('cookbooks')
 
+  author.cookbooks.push(cookbook)
+  author.save()
+  Cookbook.create(req.body)
   res.json({
       status: 200,
       author: author
