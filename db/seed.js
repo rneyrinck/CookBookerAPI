@@ -4,18 +4,18 @@ const Cookbook = require('./../models/Cookbook')
 Author.find({}).remove(() => {
   Cookbook.find({}).remove(() => {
     let meera = Author.create({
-      firstName: 'meera',
-      lastName: 'sodha'
+      firstName: 'Meera',
+      lastName: 'Sodha'
     }).then(author => {
       Promise.all([
         Cookbook.create({
-          title: 'made in india',
+          title: 'Made in India',
           yearPublished: 2014
         }).then(cookbook => {
           author.cookbooks.push(cookbook)
         }),
         Cookbook.create({
-          title: 'fresh india',
+          title: 'Fresh India',
           yearPublished: 2018
         }).then(cookbook => {
           author.cookbooks.push(cookbook)
@@ -25,12 +25,12 @@ Author.find({}).remove(() => {
       })
     })
     let alison = Author.create({
-      firstName: 'alison',
-      lastName: 'roman'
+      firstName: 'Alison',
+      lastName: 'Roman'
     }).then(author => {
       Promise.all([
         Cookbook.create({
-          title: 'dining in',
+          title: 'Dining In',
           yearPublished: 1917
         }).then(cookbook => {
           author.cookbooks.push(cookbook)
@@ -40,12 +40,12 @@ Author.find({}).remove(() => {
       })
     })
     let kenji = Author.create({
-      firstName: 'j. kengi',
-      lastName: 'lópez-alt'
+      firstName: 'J. Kengi',
+      lastName: 'López-Alt'
     }).then(author => {
       Promise.all([
         Cookbook.create({
-          title: 'the food lab',
+          title: 'The Food Lab',
           yearPublished: 2015
         }).then(cookbook => {
           author.cookbooks.push(cookbook)
