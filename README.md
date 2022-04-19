@@ -1,46 +1,39 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
-# Cookbook App
+# Cookbooker
 
-## Prerequisites
+    Hi,
+    
+    This is the first backend API I created as a project in General Assembly's Bootcamp. Its a bit rough around the edges, and my skills have improved greatly since embarking on this first experience. 
+    
+    I apreciate you taking a look and if you have any questions please let me know!
+    
+    Best,
+    
+    Robert
+
+[Deployed Link](https://pages.git.generalassemb.ly/rob-neyrinck/Cookbook-client/#/cookbooks)
+
+# Description
+
+This is a simple backend API developed with MongoDB, Mongoose, and tested using Postman. The goal is for users to be able to save Authors and cookbooks to a database for other users to view. The authors and cookbooks are linked in their schema so when a book is added, that author is also added to its seperate list. This also enables deletion of an author which results in deletion of their entire cookbook collection.
+
+In deployment I chose not to add the delete functionality for users as this functionality should be tied to a user login which I would add in a future iteration.
+
+
+## Technologies Used
 
 - Express
-- Mongoose & MongoDB
-- Mongoose Queries
-- Routes & Controllers
+    * Express is a web framework that allows developers to use multiple different HTTP requests at a specific URL. 
+- MongoDB
+    * MongoDB is a database management system used that allows developers to extract data from a site or application 
+- Mongoose
+    * Mongoose allows manipulation of data in a MongoDB database 
 - Postman
-
-## Instructions
-
-1. Fork and clone this repository.
-2. Change into the new directory.
-3. Install dependencies by running `npm install`
-4. Run `npm audit fix` to make sure all packages are up to date
-5. Fulfill the listed requirements.
-
-Starter code is available to you in the main project repo.
-
-## Requirements
-
-1. Start your server from the terminal by running: `npm run dev`
-2. Your connection and seed files are already set up for you. Start by working through the prompts inside
-
-- `Author.js`
-- `Cookbook.js`
-
-3. Run `mongod` in your terminal. In a different tab, seed your data from the command line. Use mongo to make sure your data was inserted.
-4. Review the prompts that are provided to you in the following files:
-
-- `server.js`
-- `controllers/cookbookRoutes.js`
-- `controllers/authorRoutes.js`
-
-5. In the order the files are listed above, work through the prompts, adding your code block under each prompt. Check each route as you complete them.
-6. Submit with a pull request on this repo.
+    * Postman is a tool used for testing applications databases before they are deployed 
 
 ## Routing Table
 
-Update the below routing table with the routes
+Defines the routes
 
 | **URL**               | **HTTP Verb** | **Action** | **Description**                |
 | --------------------- | ------------- | ---------- | ------------------------------ |
@@ -57,12 +50,4 @@ Update the below routing table with the routes
 | /cookbooks/:bookid    | PUT           | udpate     | update book by id              |
 | /cookbooks/:title     | DELETE        | delete     | destroy a single book by id    |
 
-## Plagiarism
 
-Take a moment to refamiliarize yourself with the [Plagiarism policy](https://git.generalassemb.ly/DC-WDI/Administrative/blob/master/plagiarism.md). Plagiarized work will not be accepted.
-
-## [License](LICENSE)
-
-1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
-2.  All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.
