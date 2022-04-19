@@ -1,15 +1,17 @@
 
 # Cookbooker
 
-    Hi,
+Hi,
     
-    This is the first backend API I created as a project in General Assembly's Bootcamp. Its a bit rough around the edges, and my skills have improved greatly since embarking on this first experience. 
+   This is the first backend API I created as a project in General Assembly's Bootcamp. 
     
-    I apreciate you taking a look and if you have any questions please let me know!
+   Its a bit rough around the edges, and my skills have improved greatly since embarking on this first experience. 
     
-    Best,
+   I apreciate you taking a look and if you have any questions please let me know!
     
-    Robert
+Best,
+    
+   Robert
 
 [Deployed Link](https://pages.git.generalassemb.ly/rob-neyrinck/Cookbook-client/#/cookbooks)
 
